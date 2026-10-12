@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 320" width="1280" height="320" role="img" aria-label="Charles (Zonkit) - Power Semiconductor Device Modeling x AIoT Hardware">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1026"/>
+      <stop offset="0.5" stop-color="#18205c"/>
+      <stop offset="1" stop-color="#5b2fd8"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.85" cy="0.2" r="0.5">
+      <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.15" cy="0.9" r="0.45">
+      <stop offset="0" stop-color="#06b6d4" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#ffffff" opacity="0.14"/>
+    </pattern>
+  </defs>
+  <rect width="1280" height="320" fill="url(#bg)"/>
+  <rect width="1280" height="320" fill="url(#glow1)"/>
+  <rect width="1280" height="320" fill="url(#glow2)"/>
+  <rect width="1280" height="320" fill="url(#dots)"/>
+  <circle cx="1120" cy="70" r="150" fill="none" stroke="#a78bfa" stroke-opacity="0.35" stroke-width="2"/>
+  <circle cx="1120" cy="70" r="108" fill="none" stroke="#a78bfa" stroke-opacity="0.25" stroke-width="1.5"/>
+  <circle cx="1120" cy="70" r="62" fill="none" stroke="#a78bfa" stroke-opacity="0.18" stroke-width="1"/>
+  <path d="M0 280 L1280 214" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1.5" fill="none"/>
+  <path d="M0 296 L1280 246" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1" fill="none"/>
+  <g font-family="'Segoe UI','Microsoft YaHei',system-ui,sans-serif">
+    <text x="72" y="112" font-size="56" font-weight="700" fill="#ffffff">Charles <tspan fill="#c4b5fd">(Zonkit)</tspan></text>
+    <text x="74" y="152" font-size="22" fill="#d8d4ff" opacity="0.92">电子科技大学 × 格拉斯哥大学 联合培养（格拉斯哥海南学院）· 通信 / 电子工程</text>
+    <text x="74" y="196" font-size="27" font-weight="600" fill="#ffffff">功率半导体器件建模 <tspan fill="#7dd3fc">×</tspan> AIoT 智能辅助硬件</text>
+    <g font-size="19" font-weight="600">
+      <rect x="72" y="228" width="196" height="42" rx="21" fill="#ffffff" opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>
+      <text x="170" y="255" text-anchor="middle" fill="#f0abfc">GPA 3.97 / 4.0</text>
+      <rect x="284" y="228" width="232" height="42" rx="21" fill="#ffffff" opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>
+      <text x="400" y="255" text-anchor="middle" fill="#7dd3fc">中国高校计算机大赛 · 省二等奖</text>
+      <rect x="532" y="228" width="220" height="42" rx="21" fill="#ffffff" opacity="0.12" stroke="#ffffff" stroke-opacity="0.25"/>
+      <text x="642" y="255" text-anchor="middle" fill="#a5f3fc">SPICE 建模 MAPE 0.957%</text>
+    </g>
+    <g font-size="16" fill="#cbd5f1" opacity="0.9">
+      <rect x="1000" y="196" width="92" height="34" rx="17" fill="#ffffff" opacity="0.10"/>
+      <text x="1046" y="218" text-anchor="middle">SiC MOSFET</text>
+      <rect x="1104" y="196" width="86" height="34" rx="17" fill="#ffffff" opacity="0.10"/>
+      <text x="1147" y="218" text-anchor="middle">PINN</text>
+      <rect x="1000" y="240" width="92" height="34" rx="17" fill="#ffffff" opacity="0.10"/>
+      <text x="1046" y="262" text-anchor="middle">AIoT</text>
+      <rect x="1104" y="240" width="86" height="34" rx="17" fill="#ffffff" opacity="0.10"/>
+      <text x="1147" y="262" text-anchor="middle">STM32</text>
+    </g>
+  </g>
+</svg>
