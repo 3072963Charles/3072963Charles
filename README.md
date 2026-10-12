@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="assets/banner_home.svg" width="100%" alt="Charles (Zonkit) - 功率半导体器件建模 x AIoT 智能硬件"/>
+  <img src="assets/banner.svg" width="100%" alt="Charles (Zonkit) - 功率半导体器件建模 x AIoT 智能硬件"/>
 </div>
 
 <br/>
