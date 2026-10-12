@@ -21,6 +21,8 @@
 
 面向视障人士的端到端智能导航与辅助系统，覆盖 **盲道导航、过马路辅助、物品查找、实时语音交互** 全流程，硬件端负责多传感器感知与语音预警，软件端负责视觉理解与智能决策。
 
+> 本项目为本人独立整理、开发与维护的完整版本（软件端 + 硬件端），以本账号（3072963Charles）下的仓库为准，与任何外部同名或相似项目相互独立。
+
 #### 软件端 · OpenAIglasses_for_Navigation
 
 ![Stars](https://img.shields.io/github/stars/3072963Charles/OpenAIglasses_for_Navigation)
