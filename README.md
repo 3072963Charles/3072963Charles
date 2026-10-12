@@ -44,7 +44,7 @@
 > 团队项目（成员：胡俊杰、许彦宸、陈德银 · 指导教师：张辽 · 电子科技大学格拉斯哥海南学院）。
 > 本项目为本人独立整理、开发与维护的完整版本，以本账号下的仓库为准，与任何外部同名或相似项目相互独立。
 
-**🎯 项目做了什么**：一款基于多传感器融合感知的穿戴式导盲眼镜——**STM32H743 主控 + ESP32-S3 通信双核异构**、**离线安全层与联网智能层双模协同**：离线层提供 360° 全域感知与本地避障闭环（无需网络、毫秒级响应），联网层接入云端 AI 实现视觉理解与场景认知，BrightEyes APP 构成家属远程守护闭环。
+**🎯 项目做了什么**：一款基于多传感器融合感知的穿戴式导盲眼镜——**STM32H743 主控 + ESP32-S3 通信双核异构**、**离线安全层与联网智能层双模协同**（C / C++ / Python 整合于单一仓库）：离线层提供 360° 全域感知与本地避障闭环（无需网络、毫秒级响应），联网层接入云端 AI 实现视觉理解与场景认知，BrightEyes APP 构成家属远程守护闭环。
 
 ```mermaid
 flowchart TB
@@ -80,8 +80,10 @@ flowchart TB
 | 🏆 **主要成果** | 中国高校计算机大赛 **海南省二等奖**；**双模架构**完整原型（离线安全层 + 联网智能层 + APP 守护闭环）；360° 无盲区感知、七级流水线 10Hz 毫秒级响应、双路径跌倒检测 0 误报、12 条标准化中文语音；四场景实机验证 |
 
 <p align="center">
-  <a href="https://github.com/3072963Charles/blindglasses-stm32"><img src="https://img.shields.io/badge/离线安全层仓库-STM32H743%20Sensor%20Hub-f97316?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="https://github.com/3072963Charles/OpenAIglasses_for_Navigation"><img src="https://img.shields.io/badge/联网智能层仓库-ESP32%20S3%20%26%20Cloud%20AI-0ea5e9?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://github.com/3072963Charles/MingMou-BrightEyes"><img src="https://img.shields.io/badge/项目仓库-MingMou%20BrightEyes%20%EF%BC%88%E5%8F%8C%E6%A8%A1%E4%B8%80%E4%BD%93%E5%8C%96%EF%BC%89-0ea5e9?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://github.com/3072963Charles/MingMou-BrightEyes/tree/main/firmware_stm32"><img src="https://img.shields.io/badge/离线安全层-firmware%20stm32%20%28C%29-f97316?style=for-the-badge"/></a>
+  <a href="https://github.com/3072963Charles/MingMou-BrightEyes/tree/main/cloud_ai_server"><img src="https://img.shields.io/badge/联网智能层-cloud%20AI%20server%20%28Python%29-16a34a?style=for-the-badge"/></a>
+</p>
 </p>
 
 ---
