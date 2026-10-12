@@ -1,4 +1,4 @@
-# 你好，我是 Charles（AI-FanGe）
+# 你好，我是 Charles（Zonkit）
 
 > 电子科技大学 × 格拉斯哥大学 联合培养（格拉斯哥海南学院）· 通信 / 电子工程方向
 
@@ -23,8 +23,8 @@
 
 #### 软件端 · OpenAIglasses_for_Navigation
 
-![Stars](https://img.shields.io/github/stars/AI-FanGe/OpenAIglasses_for_Navigation)
-![Forks](https://img.shields.io/github/forks/AI-FanGe/OpenAIglasses_for_Navigation)
+![Stars](https://img.shields.io/github/stars/3072963Charles/OpenAIglasses_for_Navigation)
+![Forks](https://img.shields.io/github/forks/3072963Charles/OpenAIglasses_for_Navigation)
 
 | 功能 | 实现 |
 |------|------|
@@ -52,7 +52,7 @@ NavigationMaster 状态机（IDLE / CHAT / BLINDPATH_NAV / CROSSING / ITEM_SEARC
 - 硬件端：ESP32-CAM + ICM42688 IMU，Arduino 固件
 - 开源协议：MIT
 
-[进入软件端仓库 →](https://github.com/AI-FanGe/OpenAIglasses_for_Navigation)
+[进入软件端仓库 →](https://github.com/3072963Charles/OpenAIglasses_for_Navigation)
 
 #### 硬件端 · BlindGlasses STM32 Sensor Hub
 
@@ -117,7 +117,7 @@ STM32H743 多传感器感知与语音预警固件：**URM09 超声波 + 4×VL53L
 
 ## 联系
 
-- GitHub: [3072963Charles](https://github.com/3072963Charles)（代码仓库）· [AI-FanGe](https://github.com/AI-FanGe)（AIoT 项目）
+- GitHub: [3072963Charles](https://github.com/3072963Charles)
 - Email: 3169548541@qq.com
 
 欢迎交流功率半导体建模、AIoT 硬件与开源项目合作。
