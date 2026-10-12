@@ -38,24 +38,50 @@
 
 ## 🚀 重点项目
 
-### ① 明眸 BrightEyes 智能导盲眼镜 —— 软硬件一体化视障辅助系统
+### ① 明眸 BrightEyes AI 全域智能导盲眼镜 —— 双核异构 · 双模架构
 
-> 面向视障人士的端到端智能导航与辅助系统，覆盖 **盲道导航、过马路辅助、物品查找、实时语音交互** 全流程：硬件端负责多传感器感知与语音预警，软件端负责 AI 视觉理解与智能决策。
->
-> 本项目为本人独立整理、开发与维护的完整版本（软件端 + 硬件端），以本账号下的仓库为准，与任何外部同名或相似项目相互独立。
+> **离线安全保障 + AI 智能增强**，让视障者安全出行，看见世界的光。
+> 团队项目（成员：胡俊杰、许彦宸、陈德银 · 指导教师：张辽 · 电子科技大学格拉斯哥海南学院）。
+> 本项目为本人独立整理、开发与维护的完整版本，以本账号下的仓库为准，与任何外部同名或相似项目相互独立。
+
+**🎯 项目做了什么**：一款基于多传感器融合感知的穿戴式导盲眼镜——**STM32H743 主控 + ESP32-S3 通信双核异构**、**离线安全层与联网智能层双模协同**：离线层提供 360° 全域感知与本地避障闭环（无需网络、毫秒级响应），联网层接入云端 AI 实现视觉理解与场景认知，BrightEyes APP 构成家属远程守护闭环。
+
+```mermaid
+flowchart TB
+    subgraph Offline[⚡ 离线安全层 · 始终在线 · 无需网络 · STM32H743 主控]
+        O1[全域感知<br/>URM09 超声波 2-500cm<br/>4×VL53L0X ToF 前/左/右/下<br/>IMU 三轴加速度]
+        O2[七级流水线避障算法<br/>10Hz 实时 · 毫秒级响应]
+        O3[三级风险预警<br/>SAFE / WARNING / EMERGENCY]
+        O4[双路径跌倒检测<br/>冲击捕捉 + 姿态分析 2s 确认]
+        O5[12 条中文语音引导<br/>JQ8900 · 语音仲裁]
+        O1 --> O2 --> O3 --> O4 --> O5
+    end
+    subgraph Online[🌐 联网智能层 · 手机网络激活 · ESP32-S3 通信]
+        N1[ESP32-S3 双模互联<br/>WiFi 6 + BT 5.0 · 视频采集]
+        N2[云端 FastAPI + AI 服务]
+        N3[盲道导航 · 红绿灯识别<br/>斑马线居中 · 物品查找 · 场景认知]
+        N1 --> N2 --> N3
+    end
+    subgraph Guard[📱 远程守护 · BrightEyes APP]
+        G1[跌倒告警秒级推送]
+        G2[状态同步 · 事件日志]
+    end
+    Offline <-->|双核协同| Online
+    O4 --> G1
+    G2 -.-> Offline
+```
 
 | 维度 | 内容 |
 |------|------|
-| 🎯 **项目做了什么** | 盲道导航（YOLO 分割 + Lucas-Kanade 光流稳定）、过马路辅助（斑马线 + 红绿灯识别 + 对齐引导）、物品查找（YOLO-E 开放词汇检测 + ByteTrack 追踪 + MediaPipe 手部引导）、实时语音交互（Paraformer ASR + Qwen-Omni-Turbo）；硬件端以 STM32H743 为核心融合 URM09 超声波 + 4×VL53L0X ToF（前/左/右/下）+ JQ8900 语音模块，实现三级危险分级与实时中文语音预警 |
-| 🧑‍💻 **我的工作** | 系统总体架构设计（软硬件分层 + 导航状态机）；软件端 FastAPI 服务与 AI 算法集成；硬件端 STM32 固件**从零开发**（传感器驱动、多传感器融合决策引擎、语音仲裁系统）；软硬件联调与实机验证 |
-| 🧭 **工作领域** | AIoT 智能硬件 · 计算机视觉 · 嵌入式系统 · 语音交互 |
-| 🎓 **学到了什么** | YOLO 实例分割与开放词汇检测、ByteTrack 多目标追踪、Lucas-Kanade 光流稳定、状态机架构设计；STM32H743 HAL 驱动开发、I2C / UART 通信协议、多传感器融合与防抖滤波、语音模块控制与仲裁策略 |
-| 🧰 **使用工具** | Python · FastAPI · PyTorch · YOLO / YOLO-E · MediaPipe · OpenCV · ESP32-CAM · STM32H743（HAL + CMake）· Three.js |
-| 🏆 **主要成果** | 中国高校计算机大赛 **海南省二等奖**；完整可运行的软硬件一体化原型；**三级危险分级** + **11 条中文语音预警轨道**；Web 实时监控（含 IMU 3D 姿态可视化） |
+| 🧑‍💻 **我的工作** | 双核异构系统总体架构设计；**STM32H743 离线安全层从零开发**（传感器驱动、七级流水线避障算法、三级风险预警、双路径跌倒检测、语音仲裁）；ESP32-S3 与云端 AI 服务集成；软硬件协同联调与四场景实机验证（城市道路 / 路口斑马线 / 台阶跌落 / 居家室内） |
+| 🧭 **工作领域** | AIoT 智能硬件 · 嵌入式系统 · 多传感器融合 · 计算机视觉 · 语音交互 |
+| 🎓 **学到了什么** | STM32H743 HAL 驱动与多传感器融合（超声波 + ToF + IMU）；ESP32-S3 WiFi6 / BT 双模通信；七级流水线避障算法与优先级语音仲裁；双路径跌倒检测（冲击捕捉 + 姿态分析）；YOLO 视觉识别与云端 AI 集成；软硬解耦与双核协同设计 |
+| 🧰 **使用工具** | STM32H743 · ESP32-S3 · URM09 · VL53L0X · IMU · JQ8900 · Python / FastAPI · PyTorch / YOLO · OpenCV / MediaPipe · CMake |
+| 🏆 **主要成果** | 中国高校计算机大赛 **海南省二等奖**；**双模架构**完整原型（离线安全层 + 联网智能层 + APP 守护闭环）；360° 无盲区感知、七级流水线 10Hz 毫秒级响应、双路径跌倒检测 0 误报、12 条标准化中文语音；四场景实机验证 |
 
 <p align="center">
-  <a href="https://github.com/3072963Charles/OpenAIglasses_for_Navigation"><img src="https://img.shields.io/badge/软件端仓库-OpenAIglasses_for_Navigation-0ea5e9?style=for-the-badge&logo=github&logoColor=white"/></a>
-  <a href="https://github.com/3072963Charles/blindglasses-stm32"><img src="https://img.shields.io/badge/硬件端仓库-blindglasses%20stm32-f97316?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://github.com/3072963Charles/blindglasses-stm32"><img src="https://img.shields.io/badge/离线安全层仓库-STM32H743%20Sensor%20Hub-f97316?style=for-the-badge&logo=github&logoColor=white"/></a>
+  <a href="https://github.com/3072963Charles/OpenAIglasses_for_Navigation"><img src="https://img.shields.io/badge/联网智能层仓库-ESP32%20S3%20%26%20Cloud%20AI-0ea5e9?style=for-the-badge&logo=github&logoColor=white"/></a>
 </p>
 
 ---
